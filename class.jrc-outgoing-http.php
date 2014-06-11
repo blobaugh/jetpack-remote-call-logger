@@ -117,7 +117,9 @@ class jrc_Outgoing_Http {
 					'type' => $request_args['method'],
 					'url' => $url,
 					'duration' => $duration,
-					'time' 	=> time()
+					'time' 	=> time(),
+					'user_agent' => $request_args['user-agent'],
+					'body' => $request_args['body']
 				) )
 			);
 			$post_id = wp_insert_post( $datas );
